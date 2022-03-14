@@ -1,0 +1,32 @@
+{
+    "language_servers": {
+        "Language Server": {
+            "serverSettings": {
+                "pyls": {
+                    "plugins": {
+                        "pydocstyle": {
+                            "enabled": true
+                        },
+                        "pyflakes": {
+                            "enabled": false
+                        },
+                        "flake8": {
+                            "enabled": true
+                        }
+                    }
+                },
+                "r-languageserver":{
+                    "serverSettings": {
+                        "r.lsp.debug": true,
+                        "r.lsp.diagnostics": true
+                    }
+                }
+            },
+            "priority": 50
+        }
+    },
+    "loggingConsole": "browser",
+    "loggingLevel": "warn",
+    "logAllCommunication": false,
+    "setTrace": null
+}

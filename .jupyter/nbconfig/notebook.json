@@ -1,0 +1,9 @@
+{
+  "load_extensions": {
+    "code_prettify/code_prettify": true,
+    "code_prettify/isort": false,
+    "varInspector/main": true,
+    "hinterland/hinterland": true,
+    "autosavetime/main": true
+  }
+}

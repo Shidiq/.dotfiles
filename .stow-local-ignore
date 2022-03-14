@@ -1,0 +1,11 @@
+\.git
+misc
+#LICENSE
+^/.*\.org
+\Google\ Drive
+.gitignore
+.DS_Store
+mybrew.txt
+README.md
+\.go
+\.R-setup
