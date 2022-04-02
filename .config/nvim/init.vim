@@ -36,6 +36,7 @@ Plug 'akinsho/toggleterm.nvim'
 " lsp
 Plug 'neovim/nvim-lspconfig'
 Plug 'ojroques/nvim-lspfuzzy'
+Plug 'hkupty/iron.nvim'
 
 " Autocompletion
 Plug 'hrsh7th/nvim-cmp'
@@ -86,3 +87,8 @@ nnoremap <leader>x x
 vnoremap <leader>x x
 nnoremap <leader>X X
 vnoremap <leader>X X
+
+
+map <C-l> <Plug>(iron-send-line)
+map <C-k> <Plug>(iron-send-lines)
+map <leader>rc <Plug>(iron-repeat-cmd)
