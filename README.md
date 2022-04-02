@@ -184,12 +184,12 @@ sudo tlmgr install rsfs
 
 library: [hkupty/iron.nvim](https://github.com/hkupty/iron.nvim)
 
-| Shortcut   | Function                  |
-| ---------- | ------------------------- |
-| :IronRepl  | Activated REPL            |
-| C + l      | send line                 |
-| C + k      | send lines or send visual |
-| <leader>rc | repeat cmd                |
+| Shortcut     | Function                  |
+| ------------ | ------------------------- |
+| :IronRepl    | Activated REPL            |
+| C + l        | send line                 |
+| C + k        | send lines or send visual |
+| `<leader>rc` | repeat cmd                |
 
 
 ---
