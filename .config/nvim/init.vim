@@ -92,3 +92,5 @@ vnoremap <leader>X X
 map <C-l> <Plug>(iron-send-line)
 map <C-k> <Plug>(iron-send-lines)
 map <leader>rc <Plug>(iron-repeat-cmd)
+nmap <silent> <F5> :IronRepl<CR>
+nmap <silent> <F4> :q<CR>
