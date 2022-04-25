@@ -1,6 +1,7 @@
 # Configuration file for lab.
 # c.LabApp.browser = '/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --app=%s'
 # c.LabApp.browser = '/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome -incognito --app=%s'
+# c.LabApp.browser = '/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome %s'
 # c.LabApp.browser = 'open -a /Applications/Min.app %s'
 
 # ------------------------------------------------------------------------------

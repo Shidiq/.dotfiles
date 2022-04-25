@@ -3,13 +3,11 @@
     "continuousHinting": true,
     "suppressContinuousHintingIn": [
         "def",
-        "comment",
         "string"
     ],
     "suppressTriggerCharacterIn": [
-        "comment",
         "string",
-        "def",
+        "def"
     ],
     "kernelResponseTimeout": 600,
     "disableCompletionsFrom": [],

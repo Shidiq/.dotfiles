@@ -8,8 +8,8 @@ formatter.setup {
             function ()
                 return {
                     exe = '/opt/homebrew/Caskroom/miniforge/base/bin/black',
-                    args = {"-"},
-                    stdin = true,
+                    args = {"-l 79"},
+                    stdin = false,
                 }
             end,
             function ()
