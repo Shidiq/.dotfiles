@@ -1,0 +1,23 @@
+theme  = "onedark-tr"
+
+[editor]
+line-number = "relative"
+cursorline = true
+auto-save = true
+completion-replace = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+
+[editor.soft-wrap]
+enable = true          # penting untuk Markdown — no horizontal scroll
+wrap-at-text-width = true
+
+[editor.file-picker]
+hidden = false          # supaya file dot tidak tersembunyi
+
+[keys.normal]
+# Quick save
+"C-s" = ":w"
+

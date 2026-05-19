@@ -1,0 +1,15 @@
+# Fish
+.config/fish/fish_history
+.config/fish/fish_variables
+
+# General cache & junk
+**/.DS_Store
+**/*.log
+**/__pycache__/
+**/.cache/
+**/node_modules/
+
+# Secrets (jangan pernah commit)
+**/.env
+**/*.key
+**/*.pem
