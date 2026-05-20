@@ -75,8 +75,10 @@
 "ui.linenr" = { fg = "linenr" }
 "ui.linenr.selected" = { fg = "white" }
 
-"ui.statusline" = { fg = "white", bg = "light-black" }
-"ui.statusline.inactive" = { fg = "light-gray", bg = "light-black" }
+# "ui.statusline" = { fg = "white", bg = "light-black" }
+# "ui.statusline.inactive" = { fg = "light-gray", bg = "light-black" }
+"ui.statusline" = {}
+"ui.statusline.inactive" = {}
 "ui.statusline.normal" = { fg = "light-black", bg = "blue", modifiers = ["bold"] }
 "ui.statusline.insert" = { fg = "light-black", bg = "green", modifiers = ["bold"] }
 "ui.statusline.select" = { fg = "light-black", bg = "purple", modifiers = ["bold"] }

@@ -113,3 +113,10 @@ function obsview
         hx $selected
     end
 end
+
+
+# Added by Antigravity CLI installer
+set -gx PATH "/Users/shidiq/.local/bin" $PATH
+
+# Added by Antigravity IDE
+fish_add_path /Users/shidiq/.antigravity-ide/antigravity-ide/bin

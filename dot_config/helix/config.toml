@@ -1,23 +1,142 @@
 theme  = "onedark-tr"
 
 [editor]
-line-number = "relative"
-cursorline = true
-auto-save = true
-completion-replace = true
-
-[editor.cursor-shape]
-insert = "bar"
-normal = "block"
+  line-number = "relative"
+  auto-save = false  # pretty annoying
+  auto-pairs = false  # too annoying sometimes
+  mouse = true
+  scroll-lines = 1
+  cursorline = true
+  idle-timeout = 250
+  completion-timeout = 5
+  completion-trigger-len = 1  # minimal length for autocompletion
+  true-color = true  # force true color support
+  color-modes = true  # use color to show modes
+  jump-label-alphabet = "asdfzxcqwervtgbyhnujmikolp"
+  end-of-line-diagnostics = "hint"
 
 [editor.soft-wrap]
-enable = true          # penting untuk Markdown — no horizontal scroll
-wrap-at-text-width = true
+  enable = true          # penting untuk Markdown — no horizontal scroll
+  wrap-at-text-width = true
+
+[editor.cursor-shape]
+  insert = "bar"
 
 [editor.file-picker]
-hidden = false          # supaya file dot tidak tersembunyi
+  hidden = false  # show files starting with dot
+
+[editor.gutters.line-numbers]
+  min-width = 2
+
+[editor.indent-guides]
+  render = true
+  character = "¦"  # "🭲" is okay too
+  skip-levels = 1
+
+[editor.search]
+  wrap-around = false  # easier to navigate through matches
+
+[editor.statusline]
+  left = [ "mode", "read-only-indicator" ]
+  center = []
+  right = [ "diagnostics" ]
+  mode.normal = "N"
+  mode.insert = "I"
+  mode.select = "S"
+
+[editor.whitespace.render]
+  tab = "all"
+  nbsp = "all"
+
+[editor.whitespace.characters]
+  nbsp = "⍽"
 
 [keys.normal]
-# Quick save
-"C-s" = ":w"
+  # WASD movements
+  w = "move_line_up"
+  a = "move_char_left"
+  s = "move_line_down"
+  d = "move_char_right"
 
+  W = ["move_line_up", "move_line_up", "move_line_up", "move_line_up", "move_line_up"]
+  A = "move_prev_word_end"
+  S = ["move_line_down", "move_line_down", "move_line_down", "move_line_down", "move_line_down"]
+  D = "move_next_word_start"
+
+  q = "extend_to_line_start"
+  e = "extend_to_line_end"
+  Q = "insert_at_line_start"
+  E = "insert_at_line_end"
+
+  # Bash-like C-a / C-e
+  C-a = "goto_line_start"
+  C-e = "goto_line_end"
+
+  # Multiple cursors
+  C-s = "select_regex"
+  C-d = ["search_selection", "extend_search_next"]
+  l = "split_selection_on_newline"
+
+  # Command palette
+  "C-p" = "command_palette"
+
+  # Search
+  "?" = "global_search"
+
+  # Rebind missing actions
+  x = "delete_selection"
+  v = "extend_line_below"
+  V = "select_mode"
+
+  # Jump back / forward
+  "j" = "jump_backward"
+  "J" = "jump_forward"
+
+  # Help
+  "h" = "hover"
+
+[keys.insert]
+  # Bash-like C-a / C-e
+  C-a = "goto_line_start"
+  C-e = "goto_line_end_newline"
+
+  # Insert tab character
+  C-t = "insert_tab"
+
+  # Command palette
+  "C-p" = "command_palette"
+
+[keys.select]
+  # WASD movements
+  w = "extend_line_up"
+  a = "extend_char_left"
+  s = "extend_line_down"
+  d = "extend_char_right"
+
+  W = "extend_line_up"
+  A = "extend_prev_word_end"
+  S = "extend_line_down"
+  D = "extend_next_word_start"
+
+  q = "extend_to_line_start"
+  e = "extend_to_line_end"
+  Q = "extend_to_line_start"
+  E = "extend_to_line_end"
+
+  # Bash-like C-a / C-e
+  C-a = "goto_line_start"
+  C-e = "goto_line_end"
+
+  # Multiple cursors
+  C-s = "select_regex"
+  C-d = ["search_selection", "extend_search_next"]
+  l = "split_selection_on_newline"
+
+  # Command palette
+  "C-p" = "command_palette"
+
+  # Search
+  "?" = "global_search"
+
+  # Rebind missing actions
+  x = "delete_selection"
