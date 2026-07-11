@@ -1,7 +1,7 @@
 theme  = "onedark-tr"
 
 [editor]
-  line-number = "relative"
+  line-number = "absolute"
   auto-save = false  # pretty annoying
   auto-pairs = false  # too annoying sometimes
   mouse = true
