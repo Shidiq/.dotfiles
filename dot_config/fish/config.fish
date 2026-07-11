@@ -1,5 +1,7 @@
 # pyenv
 set -gx PYENV_ROOT $HOME/.pyenv
+set -gx EDITOR hx
+set -gx VISUAL hx
 fish_add_path /opt/homebrew/bin
 fish_add_path /opt/homebrew/sbin
 if command -q pyenv
@@ -38,6 +40,10 @@ alias gp='git push'
 alias gl='git pull'
 alias jl='jupyter lab'
 alias \q='tmux kill-session'
+alias cfi='chezmoi edit ~/.config/fish/config.fish'
+alias chx='chezmoi edit ~/.config/helix/config.toml'
+alias cae='chezmoi edit ~/.config/aerospace/aerospace.toml'
+alias ctx='chezmoi edit ~/.config/tmux/tmux.conf'
 
 export PATH="$HOME/.local/bin:$PATH"
 
