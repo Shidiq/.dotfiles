@@ -9,9 +9,9 @@ enable-normalization-opposite-orientation-for-nested-containers = true
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 automatically-unhide-macos-hidden-apps = false
 
-[[on-window-detected]]
-if.app-name-regex-substring = 'whatsapp'
-run = 'layout floating'
+#[[on-window-detected]]
+#if.app-name-regex-substring = 'whatsapp'
+#run = 'layout floating'
 
 [[on-window-detected]]
 if.app-name-regex-substring = 'kaset'
@@ -25,9 +25,9 @@ run = 'layout floating'
 if.app-name-regex-substring = 'activity monitor'
 run = 'layout floating'
 
-[[on-window-detected]]
-if.app-name-regex-substring = 'updatest'
-run = 'layout floating'
+#[[on-window-detected]]
+#if.app-name-regex-substring = 'updatest'
+#run = 'layout floating'
 
 [key-mapping]
 preset = 'qwerty'
