@@ -8,6 +8,9 @@ if command -q pyenv
     pyenv init - | source
 end
 
+# zoxide (z alternative)
+zoxide init fish | source
+
 # Homebrew
 if test -f /opt/homebrew/bin/brew
     eval "$(/opt/homebrew/bin/brew shellenv)"
