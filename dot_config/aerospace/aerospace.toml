@@ -9,9 +9,9 @@ enable-normalization-opposite-orientation-for-nested-containers = true
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 automatically-unhide-macos-hidden-apps = false
 
-#[[on-window-detected]]
-#if.app-name-regex-substring = 'whatsapp'
-#run = 'layout floating'
+[[on-window-detected]]
+if.app-name-regex-substring = 'google drive'
+run = 'layout floating'
 
 [[on-window-detected]]
 if.app-name-regex-substring = 'kaset'
@@ -48,12 +48,12 @@ outer.top = 10
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 [mode.main.binding]
 
-cmd-h = []  # Disable "hide application"
+# cmd-h = []  # Disable "hide application"
 # TIDAK diubah: menangkap shortcut asli macOS Cmd+Option+H ("Hide Others").
 # Aman berdampingan dengan Hyper-h di bawah -- AeroSpace mencocokkan modifier
 # secara exact match, terbukti dari file lama Anda yang sudah punya alt-1 dan
 # cmd-ctrl-alt-shift-1 aktif bersamaan tanpa saling mengganggu.
-cmd-alt-h = []  # Disable "hide others"
+# cmd-alt-h = []  # Disable "hide others"
 
 cmd-ctrl-alt-shift-f = 'fullscreen'
 # alt-ctrl-f (toggle floating) sengaja DIHAPUS: kalau ikut dikonversi ke Hyper,
@@ -74,6 +74,12 @@ cmd-ctrl-alt-shift-h = 'focus left'
 cmd-ctrl-alt-shift-j = 'focus down'
 cmd-ctrl-alt-shift-k = 'focus up'
 cmd-ctrl-alt-shift-l = 'focus right'
+
+
+cmd-ctrl-alt-shift-a = 'focus left'
+cmd-ctrl-alt-shift-s = 'focus down'
+cmd-ctrl-alt-shift-w = 'focus up'
+cmd-ctrl-alt-shift-d = 'focus right'
 
 # Masuk ke mode "move" -- di dalamnya h/j/k/l dan angka 1-5 tidak perlu
 # modifier sama sekali karena Anda sudah "di dalam" konteks move.
@@ -121,4 +127,3 @@ backspace = ['close-all-windows-but-current', 'mode main']
 
 [mode.apps.binding]
 g = ['exec-and-forget open -a /Applications/Ghostty.app', 'mode main']
-
