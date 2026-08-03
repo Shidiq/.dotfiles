@@ -10,6 +10,7 @@ end
 
 # zoxide (z alternative)
 zoxide init fish | source
+alias e='yazi'
 
 # Homebrew
 if test -f /opt/homebrew/bin/brew

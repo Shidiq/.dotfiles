@@ -21,6 +21,8 @@ theme  = "onedark-tr"
 
 [editor.cursor-shape]
   insert = "bar"
+  normal = "block"
+  select = "underline"
 
 [editor.file-picker]
   hidden = false  # show files starting with dot
@@ -69,8 +71,8 @@ theme  = "onedark-tr"
   E = "insert_at_line_end"
 
   # Bash-like C-a / C-e
-  C-a = "goto_line_start"
-  C-e = "goto_line_end"
+  # C-a = "goto_line_start"
+  # C-e = "goto_line_end"
 
   # Multiple cursors
   C-s = "select_regex"
@@ -94,6 +96,15 @@ theme  = "onedark-tr"
 
   # Help
   "h" = "hover"
+
+  # Yazi
+  C-e = [
+    ':sh rm -f /tmp/unique-file',
+    ':insert-output yazi %{buffer_name} --chooser-file=/tmp/unique-file',
+    ':insert-output echo "\x1b[?1049h\x1b[?2004h" > /dev/tty',
+    ':open %sh{cat /tmp/unique-file}',
+    ':redraw',
+  ]
 
 [keys.insert]
   # Bash-like C-a / C-e
@@ -140,3 +151,6 @@ theme  = "onedark-tr"
 
   # Rebind missing actions
   x = "delete_selection"
+
+  i = "select_textobject_inner"
+  o = "select_textobject_around"
