@@ -25,12 +25,25 @@ end
 # Auto-start/attach tmux (only for interactive, non-nested shells)
 if status is-interactive
     and not set -q TMUX
-    and not set -q NO_TMUX
-
-    if tmux has-session 2>/dev/null
-        exec tmux attach-session
+    and not set -q VSCODE_RESOLVING_ENVIRONMENT
+    and isatty stdin
+    and isatty stdout
+    if set -q ZED_TERM; or contains -- "$TERM_PROGRAM" zed vscode
+        set -l session_name (basename $PWD | string replace -a '.' '_' | string replace -a ' ' '_')
+        if tmux has-session -t $session_name 2>/dev/null
+            exec tmux attach-session -t $session_name
+        else
+            exec tmux new-session -s $session_name -c $PWD
+        end
     else
-        exec tmux new-session
+        if test "$PWD" != "$HOME"
+            set -l name (string replace -ra '[.:\s]' '_' -- (path basename $PWD))
+            exec tmux new-session -A -s $name -c $PWD
+        else if tmux has-session 2>/dev/null
+            exec tmux attach-session
+        else
+            exec tmux new-session
+        end
     end
 end
 
